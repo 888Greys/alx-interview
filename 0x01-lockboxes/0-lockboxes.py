@@ -1,8 +1,14 @@
 #!/usr/bin/python3
+"""
+Solution to lockboxex
+"""
 from collections import deque
 
 
 def canUnlockAll(boxes):
+    """
+    Determining weather a series of boxes can be opened
+    """
     # craete a set to keep track of visited boxes
     visited = set()
     # initializes a queue with the first box

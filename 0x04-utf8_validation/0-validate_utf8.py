@@ -40,7 +40,6 @@ def validUTF8(data):
 
             # If the byte is a multi-byte character, check if it is valid
 
-
             # A multi-byte character can start with a "110" prefix
             if expected_continuation_bytes == 1 or\
                     expected_continuation_bytes > 4:

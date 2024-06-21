@@ -14,6 +14,8 @@ calculating the number of coins needed to reach the total amount. It returns
 the minimum number of coins needed, or -1 if it is not possible to reach the
 total amount using the given coins.
 """
+
+
 def makeChange(coins, total):
     """ fewest number of coins needed to meet total """
     if total <= 0:
@@ -30,4 +32,3 @@ def makeChange(coins, total):
     if total != 0:
         return -1
     return change
-

@@ -5,20 +5,25 @@
 
 
 def island_perimeter(grid):
-    if not grid:
-        return 0
-    perimeter = 0
-    rows, cols = len(grid), len(grid[0])
+    """
+    Calculates the perimeter of an island represented by a grid
+    of 1s and 0s, where 1s represent land and 0s represent water.
+    Args:
+        grid (list): A list of lists representing the island.
+    Returns:
+        The perimeter of the island as an integer.
+    """
 
-    for i in range(rows):
-        for j in range(cols):
-            if grid[i][j] == 1:
-                if i == 0 or grid[i-1][j] == 0:
-                    perimeter += 1
-                if i == rows - 1 or grid[i+1][j] == 0:
-                    perimeter += 1
-                if j == 0 or grid[i][j-1] == 0:
-                    perimeter += 1
-                if j == cols - 1 or grid[i][j+1] == 0:
-                    perimeter += 1
-    return perimeter
+    p = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if (grid[i][j] == 1):
+                if (i <= 0 or grid[i - 1][j] == 0):
+                    p += 1
+                if (i >= len(grid) - 1 or grid[i + 1][j] == 0):
+                    p += 1
+                if (j <= 0 or grid[i][j - 1] == 0):
+                    p += 1
+                if (j >= len(grid[i]) - 1 or grid[i][j + 1] == 0):
+                    p += 1
+    return p
